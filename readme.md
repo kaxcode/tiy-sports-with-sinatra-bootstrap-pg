@@ -26,6 +26,9 @@ create table teams(id serial, name text, description text, image_url text);
 create table memberships(id serial, team_id integer, player_id integer);
 ```
 
+
+SELECT count(players.id), teams.name FROM players, teams, memberships WHERE players.id = memberships.player_id AND teams.id = memberships.team_id group by teams.name, teams.description, teams,image_url
+
 ## Explorer Mode
 
 - Turn the `Teams` table into dynamic data from the database by querying:

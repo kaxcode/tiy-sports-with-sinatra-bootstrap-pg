@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'pg'
-require 'sinatra/reloader'
+require "sinatra/reloader" if development?
 
 # Number of Teams
 get '/' do
